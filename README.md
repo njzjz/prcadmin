@@ -4,7 +4,11 @@
 
 [`current.csv`](current.csv)为2023年的最新数据。
 
-[`patches`](patches)文件夹给出了2022年-2023年的历年变更，以patch文件储存。
+[`patches`](patches)文件夹给出了2022年-2023年的历年变更，以patch文件储存。对最新数据应用patch时，需要使用`--reverse`：
+
+```sh
+git apply --reverse patches/2023.patch
+```
 
 ## 下载脚本
 
