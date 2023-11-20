@@ -125,7 +125,7 @@ async def writer(queue, fn):
         while True:
             division = await queue.get()
             writer.writerow(
-                {"code": division[0], "name": division[1], "level": division[2]}
+                {"code": division[0].strip(), "name": division[1].strip(), "level": division[2]}
             )
             queue.task_done()
             t_saved.update(1)
